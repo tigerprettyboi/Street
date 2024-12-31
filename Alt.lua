@@ -1,0 +1,25 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Oxygenz Hub", "DarkTheme")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("You can setting your keybind")
+Section:NewKeybind("Bring a ball(you must be nearby)", "", Enum.KeyCode.Q, function()
+	local args = {
+    [1] = 6.388266086578369
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("tcelloc"):FireServer(unpack(args))
+end)
+local Tab = Window:NewTab("Away Team")
+local Section = Tab:NewSection("⚠️Read First⚠️")
+local Section = Tab:NewSection("If you as a away team you must use this tab")
+local Section = Tab:NewSection("ถ้าอยู่ฝั่ง Away ให้ใช้แท็บนี้")
+Section:NewKeybind("Teleport to goal", "", Enum.KeyCode.F, function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(157.95921325683594, 4.761381149291992, -1.7838457822799683)
+end)
+local Tab = Window:NewTab("Home Team")
+local Section = Tab:NewSection("⚠️Read First⚠️")
+local Section = Tab:NewSection("If you as a home team you must use this tab")
+local Section = Tab:NewSection("ถ้าอยู่ฝั่ง Home ให้ใช้แท็บนี้")
+Section:NewKeybind("Teleport to goal", "", Enum.KeyCode.E, function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-158.31427001953125, 4.76138162612915, 23.994577407836914)
+end)
